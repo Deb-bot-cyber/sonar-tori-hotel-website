@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import hotelLogo from '../assets/Hotel_SonarToriLogo.png';
 
 const Navbar = () => {
@@ -20,7 +20,6 @@ const Navbar = () => {
     { name: 'DINING', href: '#dining' },
     { name: 'AMENITIES', href: '#amenities' },
     { name: 'GALLERY', href: '#gallery' },
-    { name: 'PACKAGES', href: '#packages' },
     { name: 'LOCATION', href: '#location' },
     { name: 'CONTACT', href: '#contact' },
   ];

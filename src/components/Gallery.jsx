@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 import img1 from '../assets/HeroImages/SDP_4393.JPG';
 import img2 from '../assets/HeroImages/SDP_4395.JPG';

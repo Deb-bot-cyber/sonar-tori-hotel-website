@@ -10,17 +10,17 @@ const rooms = [
   },
   {
     id: 2,
-    title: 'Super Deluxe Royal Club',
-    price: '₹1890',
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    specs: { sqft: '120', bed: '1 King', sleeps: '2' }
-  },
-  {
-    id: 3,
     title: 'Super Deluxe (A/C)',
     price: '₹1680',
     image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     specs: { sqft: '90', bed: '1 King', sleeps: '2' }
+  },
+  {
+    id: 3,
+    title: 'Super Deluxe Royal Club (A/C)',
+    price: '₹1890',
+    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    specs: { sqft: '120', bed: '1 King', sleeps: '2' }
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const rooms = [
     id: 5,
     title: 'Standard (Non AC)',
     price: '₹1260',
-    image: 'https://images.unsplash.com/photo-1505691938895-1758d7eaa511?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80',
     specs: { sqft: '60', bed: '1 Double', sleeps: '2' }
   }
 ];

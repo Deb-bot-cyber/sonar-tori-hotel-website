@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -8,7 +8,6 @@ import Amenities from './components/Amenities';
 import Restaurant from './components/Restaurant';
 import Gallery from './components/Gallery';
 import LocationMap from './components/LocationMap';
-import Packages from './components/Packages';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 
@@ -24,7 +23,6 @@ function App() {
         <Restaurant />
         <Gallery />
         <LocationMap />
-        <Packages />
         <ContactUs />
       </main>
       <Footer />
