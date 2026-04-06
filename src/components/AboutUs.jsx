@@ -26,19 +26,19 @@ const AboutUs = () => {
 
   const stats = [
     {
-      label: 'Positive Feedback',
-      number: '98%',
-      desc: 'Over 98% positive feedback from satisfied guests, reflecting our commitment to exceptional service and memorable stays.'
+      label: 'Luxury Units',
+      number: '25+',
+      desc: 'Our newly designed luxury spaces are ready to welcome you with premium interiors and state-of-the-art amenities.'
     },
     {
-      label: 'Years of Expertise',
-      number: '15+',
-      desc: 'Backed by 15 years of industry expertise, we turn every stay into a seamless experience.'
+      label: 'Contemporary Design',
+      number: '100%',
+      desc: 'Experience a fresh perspective on hospitality with our modern architecture and meticulously planned layouts.'
     },
     {
-      label: 'Happy Clients',
-      number: '25K+',
-      desc: 'Proudly serving 25K+ happy travelers who\'ve trusted us to find their perfect stay.'
+      label: 'Guest Commitment',
+      number: '24/7',
+      desc: 'Being a new landmark, our dedicated team is focused on providing personalized care to make your very first stay memorable.'
     }
   ];
 
@@ -58,16 +58,14 @@ const AboutUs = () => {
             className="text-2xl md:text-3xl font-light leading-snug transition-all duration-300"
           >
             {(() => {
-              const text = "Since 2016, we've been helping travelers find stays they love — effortlessly. We're about curating unforgettable journeys! Since 2016, our passionate team has been helping travelers find the perfect stay, blending seamless technology with a love for discovery. From cozy hideaways to grand escapes, we turn your travel dreams into real-world adventures.";
+              const text = "Welcome to Sonar Tori, Cooch Behar's newest luxury landmark. We have recently opened our doors to offer a fresh perspective on hospitality, combining modern architectural elegance with timeless comfort. Every corner of our property is designed to provide a serene escape, featuring state-of-the-art amenities and a dedicated team committed to making your very first visit truly unforgettable. Experience the vibrant energy of a new beginning with us.";
               const characters = text.split("");
               return characters.map((char, index) => {
                 // Calculate individual character reveal progress
-                // Each character has a slightly offset start point based on its index
                 const charTotal = characters.length;
                 const charStart = index / charTotal;
-                const charEnd = (index + 20) / charTotal; // Each letter takes 20/total of the scroll range
+                const charEnd = (index + 20) / charTotal; 
                 
-                // Map the overall scroll progress to this character's range
                 const charProgress = Math.max(0, Math.min(1, (scrollProgress - charStart) / (charEnd - charStart)));
                 
                 return (
@@ -84,8 +82,8 @@ const AboutUs = () => {
               });
             })()}
           </p>
-          <a href="#" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest border-b border-dark-bg pb-1 hover:text-primary hover:border-primary transition-all">
-            KNOW MORE <span className="text-lg">→</span>
+          <a href="#rooms" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest border-b border-dark-bg pb-1 hover:text-primary hover:border-primary transition-all">
+            EXPLORE ROOMS <span className="text-lg">→</span>
           </a>
         </div>
       </div>
@@ -94,15 +92,15 @@ const AboutUs = () => {
       <div className="w-full">
         <div className="flex items-center gap-2 text-dark-bg font-bold text-xs uppercase tracking-widest mb-16">
           <span className="w-2 h-2 rounded-none bg-dark-bg"></span>
-          BY THE NUMBER
+          MODERN EXCELLENCE
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="bg-gray-50 p-12 flex flex-col gap-6 transition-all duration-500 rounded-none">
               <div className="font-heading text-7xl md:text-8xl font-normal text-dark-bg flex items-baseline">
-                {stat.number.replace(/\D/g, '')}
-                <span className="text-primary text-5xl ml-1">{stat.number.replace(/\d/g, '')}</span>
+                {stat.number.replace(/[^0-9.]/g, '')}
+                <span className="text-primary text-5xl ml-1">{stat.number.replace(/[0-9.]/g, '')}</span>
               </div>
               <div className="space-y-4">
                 <h4 className="text-xl font-bold text-dark-bg">{stat.label}</h4>
