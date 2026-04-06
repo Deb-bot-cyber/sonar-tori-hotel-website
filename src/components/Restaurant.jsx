@@ -33,18 +33,18 @@ const Restaurant = () => {
         </div>
         </div>
         <div className="flex-1 relative h-[600px] w-full mt-16 md:mt-0">
-        <div className="absolute top-0 right-0 w-[75%] h-[85%] rounded-none overflow-hidden border-2 border-primary shadow-2xl z-10 scale-100 hover:scale-105 transition-transform duration-700 cursor-pointer group">
+          <div className="absolute top-0 right-0 w-[75%] h-[85%] rounded-none overflow-hidden border-2 border-primary shadow-2xl z-10 scale-100 hover:scale-105 transition-transform duration-700 cursor-pointer group">
             <img 
-              src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-              alt="Restaurant interior" 
+              src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+              alt="Authentic Indian fine dining" 
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]"
             />
             <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
           </div>
-        <div className="absolute bottom-0 left-0 w-[60%] h-[55%] rounded-none overflow-hidden border-4 border-dark-bg shadow-2xl z-20 hover:scale-110 transition-transform duration-700 cursor-pointer group">
+          <div className="absolute bottom-0 left-0 w-[60%] h-[55%] rounded-none overflow-hidden border-4 border-dark-bg shadow-2xl z-20 hover:scale-110 transition-transform duration-700 cursor-pointer group">
             <img 
-              src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-              alt="Gourmet dish" 
+              src="https://images.unsplash.com/photo-1631515223380-c127445ef442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              alt="Exquisite Indian gourmet platter" 
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]"
             />
             <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>

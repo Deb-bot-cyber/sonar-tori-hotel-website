@@ -17,7 +17,6 @@ const Navbar = () => {
     { name: 'HOME', href: '#hero' },
     { name: 'ABOUT', href: '#about' },
     { name: 'ROOMS', href: '#rooms' },
-    { name: 'DINING', href: '#dining' },
     { name: 'AMENITIES', href: '#amenities' },
     { name: 'GALLERY', href: '#gallery' },
     { name: 'LOCATION', href: '#location' },
@@ -28,16 +27,16 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 w-full transition-all duration-500 z-50 ${scrolled || mobileMenuOpen ? 'bg-black/95 backdrop-blur-md shadow-2xl border-b border-primary/10' : 'bg-transparent'}`}>
       {/* Top Info Bar */}
       <div className="w-full px-[60px] py-2 bg-primary/10 backdrop-blur-sm border-b border-white/5 hidden md:flex justify-between items-center text-[10px] font-bold tracking-[0.2em] text-white/50">
-        <div className="flex gap-6 uppercase">
-          <span>Dinhata Main Road, Cooch Behar</span>
-          <span>Check-in: 10AM | Check-out: 9AM</span>
+        <div className="flex gap-6 uppercase items-center">
+          <span className="flex items-center gap-1.5"><i className="ri-map-pin-fill text-primary"></i> Dinhata Main Road, Cooch Behar</span>
+          <span className="flex items-center gap-1.5"><i className="ri-time-line text-primary"></i> Check-in: 10AM | Check-out: 9AM</span>
         </div>
-        <div className="flex gap-6">
-          <a href="tel:+919641733880" className="hover:text-primary transition-colors">PH: +91 96417 33880</a>
-          <a href="tel:+919907427858" className="hover:text-primary transition-colors">PH: +91 99074 27858</a>
+        <div className="flex gap-6 items-center">
+          <a href="tel:+919641733880" className="hover:text-primary transition-colors flex items-center gap-1.5"><i className="ri-phone-fill text-primary"></i> +91 96417 33880</a>
+          <a href="tel:+919907427858" className="hover:text-primary transition-colors flex items-center gap-1.5"><i className="ri-phone-fill text-primary"></i> +91 99074 27858</a>
         </div>
       </div>
-      
+
       <div className={`w-full px-[60px] flex justify-between items-center ${scrolled || mobileMenuOpen ? 'py-4' : 'py-6'}`}>
         {/* Brand / Logo */}
         <a href="#" className="flex items-center gap-4 group">
@@ -61,8 +60,10 @@ const Navbar = () => {
 
           {/* Reservation Button */}
           <a
-            href="#contact"
-            className="btn-outline !py-2.5 !px-6 !text-[12px]"
+            href="https://wa.me/919832579769"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline !py-2.5 !px-6 !text-[12px] flex items-center gap-2"
           >
             Reservation
           </a>
@@ -70,10 +71,10 @@ const Navbar = () => {
 
         {/* Mobile Menu Icon */}
         <div
-          className="lg:hidden text-white text-3xl cursor-pointer hover:text-primary transition-colors"
+          className="lg:hidden text-white text-3xl cursor-pointer hover:text-primary transition-colors flex items-center justify-center p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? '✕' : '☰'}
+          <i className={mobileMenuOpen ? 'ri-close-line' : 'ri-menu-3-line'}></i>
         </div>
       </div>
 
@@ -87,7 +88,9 @@ const Navbar = () => {
           ))}
           <li className="mt-4 w-full">
             <a
-              href="#contact"
+              href="https://wa.me/919832579769"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="btn-primary w-full text-center"
             >

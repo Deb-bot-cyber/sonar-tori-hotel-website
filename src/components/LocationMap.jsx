@@ -14,21 +14,21 @@ const LocationMap = () => {
           </p>
           <div className="space-y-6 pt-6">
             <div className="flex items-start gap-4">
-              <span className="text-primary text-2xl">📍</span>
+              <i className="ri-map-pin-2-line text-primary text-2xl mt-1"></i>
               <p className="text-white text-base leading-relaxed tracking-wide font-light">
                 <strong className="text-primary font-bold uppercase tracking-tighter block mb-1">Address:</strong>
                 Dinhata Main Road, Express Bazar-3rd Floor,<br />Dinhata, Cooch Behar - 736135
               </p>
             </div>
             <div className="flex items-start gap-4">
-              <span className="text-primary text-2xl">🚉</span>
+              <i className="ri-train-line text-primary text-2xl mt-1"></i>
               <p className="text-white text-base leading-relaxed tracking-wide font-light">
                 <strong className="text-primary font-bold uppercase block mb-1">Transit:</strong>
                 Dinhata Railway Station (Local), Cooch Behar Airport (appx 25 km)
               </p>
             </div>
             <div className="flex items-start gap-4">
-              <span className="text-primary text-2xl">🏢</span>
+              <i className="ri-building-2-line text-primary text-2xl mt-1"></i>
               <p className="text-white text-base leading-relaxed tracking-wide font-light">
                 <strong className="text-primary font-bold uppercase block mb-1">Nearby:</strong>
                 Express Bazar, Dinhata Main Market, Cooch Behar City (45 mins)
@@ -36,7 +36,12 @@ const LocationMap = () => {
             </div>
           </div>
           <div className="pt-8 text-left">
-            <a href="#directions" className="btn-primary">
+            <a 
+              href="https://www.google.com/maps/place/26%C2%B007'49.2%22N+89%C2%B027'45.2%22E/@26.130331,89.4599724,752m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d26.130331!4d89.4625473?hl=en&entry=ttu" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-primary"
+            >
               Get Directions
             </a>
           </div>
@@ -44,7 +49,7 @@ const LocationMap = () => {
         <div className="flex-[1.5] h-[500px] min-h-[400px] lg:h-auto rounded-none overflow-hidden glass-panel p-1 group border-white/5 bg-white/5">
           <div className="w-full h-full rounded-none overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000">
             <iframe 
-              src="https://maps.google.com/maps?q=Hotel%20Sonar%20Tori,%20Dinhata,%20Cooch%20Behar&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3404.800889344108!2d89.4625556!3d26.130333300000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDA3JzQ5LjIiTiA4OcKwMjcnNDUuMiJF!5e1!3m2!1sen!2sin!4v1775450014080!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

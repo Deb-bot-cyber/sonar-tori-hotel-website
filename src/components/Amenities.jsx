@@ -1,35 +1,42 @@
 import { useState, useEffect } from 'react';
 
+// Import specifically named local images for amenities
+import wifiImg from '../assets/wifi.jpg';
+import serviceImg from '../assets/room_service.jpg';
+import parkingImg from '../assets/parking.jpg';
+import housekeepingImg from '../assets/house_keeping.jpg';
+import acImg from '../assets/AC.jpg';
+
 const amenitiesList = [
   { 
-    title: 'Infinity Pool', 
-    desc: 'Breathtaking rooftop views with temperature control.',
-    image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    tags: ['Depth: 5ft', 'Size: 20x40m', 'Temp: 28°C']
-  },
-  { 
-    title: 'Luxury Spa', 
-    desc: 'Signature treatments by world-class therapists.',
-    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Therapeutic', 'Steam Bath', 'Organic Products']
-  },
-  { 
-    title: 'Fitness Center', 
-    desc: 'State-of-the-art equipment for your performance.',
-    image: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    tags: ['24/7 Access', 'Pro Trainers', 'Advanced Gear']
-  },
-  { 
-    title: 'Executive Concierge', 
-    desc: 'Dedicated assistance for all your requests.',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    tags: ['Tour Guides', 'Travel Desk', 'Valet Pickups']
-  },
-  { 
     title: 'High-Speed Connectivity', 
-    desc: 'Seamless internet throughout the entire property.',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    tags: ['Gigabit WiFi', 'Cloud Ready', 'Safe Network']
+    desc: 'Experience seamless gigabit fiber internet across our entire premises, tailored for business professionals and digital nomads.',
+    image: wifiImg,
+    tags: ['Gigabit WiFi', 'Cloud Ready', '24/7 Access']
+  },
+  { 
+    title: '24/7 Room Service', 
+    desc: 'Savor gourmet Indian and global delicacies from the comfort of your sanctuary, served meticulously by our master chefs.',
+    image: serviceImg,
+    tags: ['Exquisite Cuisine', 'Prompt Service', 'Freshly Prepared']
+  },
+  { 
+    title: 'Free Secure Parking', 
+    desc: 'Your vehicles are safe in our expansive, well-lit parking zone, monitored continuously by 24/7 security and CCTV.',
+    image: parkingImg,
+    tags: ['CCTV Secured', 'Complimentary', 'Large Compound']
+  },
+  { 
+    title: 'Professional Housekeeping', 
+    desc: 'Unwavering commitment to hygiene and cleanliness with our dedicated team ensuring your room is immaculate daily.',
+    image: housekeepingImg,
+    tags: ['Deep Sanitized', 'Modern Equipment', 'Timely Service']
+  },
+  { 
+    title: 'Full Air Conditioning', 
+    desc: 'Each corner of our property features premium climate control, ensuring your absolute comfort regardless of the weather.',
+    image: acImg,
+    tags: ['Individual Control', 'Silent Operation', 'Constant Temp']
   }
 ];
 
@@ -72,56 +79,52 @@ const Amenities = () => {
     <section id="amenities" className="py-24 bg-white relative overflow-hidden">
       {/* Heading Block */}
       <div className="section-title-container !mb-16 text-center">
-        <div className="flex items-center justify-center gap-4 mb-4">
-          <div className="w-12 h-[1px] bg-primary"></div>
-          <span className="text-primary font-bold text-[10px] tracking-[0.4em]">Discover Our Best Offers</span>
-        </div>
         <h2 className="text-4xl md:text-5xl lg:text-6xl text-dark-bg font-heading leading-tight tracking-tight">
           Our Amenities
         </h2>
       </div>
-      
+
       {/* Carousel Container */}
       <div className="relative w-full overflow-hidden">
         {/* Sliding Track */}
-        <div 
+        <div
           className="flex gap-8"
-          style={{ 
+          style={{
             transition: isTransitioning ? 'transform 1000ms ease-in-out' : 'none',
-            transform: `translateX(calc(-${activeIndex * 60}% - ${activeIndex * 32}px + 20%))` 
+            transform: `translateX(calc(-${activeIndex * 60}% - ${activeIndex * 32}px + 20%))`
           }}
         >
           {extendedList.map((item, index) => {
             const isCenter = index === activeIndex;
             return (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`min-w-[60%] relative group transition-all duration-1000 ${isCenter ? 'scale-100 opacity-100 z-20' : 'scale-90 opacity-20 z-10 grayscale'}`}
               >
                 <div className="aspect-[16/9] overflow-hidden shadow-2xl relative">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" 
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110"
                   />
-                  
+
                   {/* Overlay Text Content */}
                   <div className={`absolute inset-x-0 bottom-0 p-8 md:p-12 text-center text-white z-20 transition-all duration-700 ${isCenter ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                      <div className="flex justify-center items-center gap-3 mb-4 scale-75 md:scale-100 opacity-60">
-                        <span className="w-8 h-[1px] bg-white"></span>
-                        <span className="text-[12px] font-bold tracking-[0.3em]">Signature Feature</span>
-                        <span className="w-8 h-[1px] bg-white"></span>
-                     </div>
-                     <h3 className="text-3xl md:text-5xl font-heading mb-6 tracking-wide drop-shadow-xl">{item.title}</h3>
-                     
-                     {/* Specs Row */}
-                     <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-[10px] md:text-[12px] font-bold tracking-[0.1em] uppercase opacity-80 border-t border-white/20 pt-6">
-                       {item.tags.map((tag, i) => (
-                          <span key={i} className="flex items-center gap-2">
-                             <span className="text-primary text-xl translate-y-[2px]">✧</span> {tag}
-                          </span>
-                       ))}
-                     </div>
+                    <div className="flex justify-center items-center gap-3 mb-4 scale-75 md:scale-100 opacity-60">
+                      <span className="w-8 h-[1px] bg-white"></span>
+                      <span className="text-[12px] font-bold tracking-[0.3em]">Signature Feature</span>
+                      <span className="w-8 h-[1px] bg-white"></span>
+                    </div>
+                    <h3 className="text-3xl md:text-5xl font-heading mb-6 tracking-wide drop-shadow-xl">{item.title}</h3>
+
+                    {/* Specs Row */}
+                    <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-[10px] md:text-[12px] font-bold tracking-[0.1em] uppercase opacity-80 border-t border-white/20 pt-6">
+                      {item.tags.map((tag, i) => (
+                        <span key={i} className="flex items-center gap-2">
+                          <i className="ri-sparkling-fill text-primary text-lg translate-y-[1px]"></i> {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
                   {/* Dark Vignette Overlay */}
@@ -136,13 +139,13 @@ const Amenities = () => {
       {/* Pagination Bars */}
       <div className="flex justify-center items-center gap-4 mt-12 mb-16">
         {amenitiesList.map((_, i) => (
-          <button 
-             key={i}
-             onClick={() => {
-               setIsTransitioning(true);
-               setActiveIndex(i + amenitiesList.length);
-             }}
-             className={`h-[3px] transition-all duration-500 rounded-none ${activeIndex % amenitiesList.length === i ? 'w-12 bg-primary' : 'w-6 bg-gray-200 hover:bg-gray-300'}`}
+          <button
+            key={i}
+            onClick={() => {
+              setIsTransitioning(true);
+              setActiveIndex(i + amenitiesList.length);
+            }}
+            className={`h-[3px] transition-all duration-500 rounded-none ${activeIndex % amenitiesList.length === i ? 'w-12 bg-primary' : 'w-6 bg-gray-200 hover:bg-gray-300'}`}
           />
         ))}
       </div>
@@ -150,13 +153,9 @@ const Amenities = () => {
       {/* Footer Text & Action */}
       <div className="max-w-3xl mx-auto text-center space-y-10 px-6">
         <p className="text-dark-bg/80 text-lg md:text-xl font-light leading-relaxed">
-          Indulge in our world-class facilities designed for your ultimate leisure and convenience. 
-          From rooftop infinity pools to professional fitness suites, we provide everything needed for a seamless stay.
+          Experience unparalleled comfort with our range of essential facilities.
+          From high-speed connectivity to 24/7 room service, we ensure your stay is as convenient as it is comfortable.
         </p>
-
-        <button className="bg-primary hover:bg-primary-dark text-white px-12 py-5 font-bold uppercase tracking-[0.2em] text-xs transition-all shadow-xl shadow-primary/20 hover:-translate-y-1 cursor-pointer">
-          Explore Our Facilities
-        </button>
       </div>
     </section>
   );

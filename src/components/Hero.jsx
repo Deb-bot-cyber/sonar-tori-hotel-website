@@ -62,7 +62,7 @@ const Hero = () => {
 
         {/* Action Button */}
         <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up" style={{ animationDelay: '1s' }}>
-          <a href="#rooms" className="btn-primary">
+          <a href="https://wa.me/919832579769" target="_blank" rel="noopener noreferrer" className="btn-primary">
             Book Apartments
           </a>
           <a href="#about" className="btn-outline">

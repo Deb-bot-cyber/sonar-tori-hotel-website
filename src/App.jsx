@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
 import RoomsSuites from './components/RoomsSuites';
 import Amenities from './components/Amenities';
-import Restaurant from './components/Restaurant';
 import Gallery from './components/Gallery';
 import LocationMap from './components/LocationMap';
 import ContactUs from './components/ContactUs';
@@ -20,7 +19,6 @@ function App() {
         <AboutUs />
         <RoomsSuites />
         <Amenities />
-        <Restaurant />
         <Gallery />
         <LocationMap />
         <ContactUs />
