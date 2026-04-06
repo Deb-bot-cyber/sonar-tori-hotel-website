@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/sonar-tori-hotel-website/',
+  base: process.env.VERCEL ? '/' : '/sonar-tori-hotel-website/',
   plugins: [
     tailwindcss(),
     react(),
