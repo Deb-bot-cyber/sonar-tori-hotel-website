@@ -99,8 +99,11 @@ const AboutUs = () => {
           {stats.map((stat, index) => (
             <div key={index} className="bg-gray-50 p-12 flex flex-col gap-6 transition-all duration-500 rounded-none">
               <div className="font-heading text-7xl md:text-8xl font-normal text-dark-bg flex items-baseline">
-                {stat.number.replace(/[^0-9.]/g, '')}
-                <span className="text-primary text-5xl ml-1">{stat.number.replace(/[0-9.]/g, '')}</span>
+                {stat.number.split(/(\D+)/).map((part, i) => (
+                  <span key={i} className={/\D/.test(part) ? "text-primary text-5xl ml-0.5" : ""}>
+                    {part}
+                  </span>
+                ))}
               </div>
               <div className="space-y-4">
                 <h4 className="text-xl font-bold text-dark-bg">{stat.label}</h4>
