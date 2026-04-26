@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 
 // Import Hero Images
-import img1 from '../assets/HeroImages/SDP_4393.JPG';
-import img2 from '../assets/HeroImages/SDP_4395.JPG';
-import img3 from '../assets/HeroImages/SDP_4404.JPG';
-import img4 from '../assets/HeroImages/SDP_4425.JPG';
-import img5 from '../assets/HeroImages/SDP_4439.JPG';
+// Import Hero Images from Room Assets
+import img1 from '../assets/Sweet Rooms/SDP_4393.JPG';
+import img2 from '../assets/Super Deluxe Royal Club/SDP_4483.JPG';
+import img3 from '../assets/Deluxe Separate/SDP_4555.JPG';
+import img4 from '../assets/Couple Bed/SDP_4525.JPG';
+import img5 from '../assets/Sweet Rooms/SDP_4425.JPG';
 
 const heroImages = [img1, img2, img3, img4, img5];
 

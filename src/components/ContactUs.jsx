@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import contactBg from '../assets/HeroImages/SDP_4439.JPG';
+import contactBg from '../assets/Sweet Rooms/SDP_4393.JPG';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({

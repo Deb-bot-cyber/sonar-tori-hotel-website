@@ -1,56 +1,109 @@
 import React, { useState, useEffect } from 'react';
 
-// Import Suite Room Images
-import suite1 from '../assets/Sweet Rooms/SDP_4393.JPG';
-import suite2 from '../assets/Sweet Rooms/SDP_4394.JPG';
-import suite3 from '../assets/Sweet Rooms/SDP_4407.JPG';
-import suite4 from '../assets/Sweet Rooms/SDP_4413.JPG';
-import suite5 from '../assets/Sweet Rooms/SDP_4422.JPG';
-import suite6 from '../assets/Sweet Rooms/SDP_4556.JPG';
-import suite7 from '../assets/Sweet Rooms/SDP_4562.JPG';
+// Import Sweet Rooms Images
+import sweet1 from '../assets/Sweet Rooms/SDP_4392.JPG';
+import sweet2 from '../assets/Sweet Rooms/SDP_4393.JPG';
+import sweet3 from '../assets/Sweet Rooms/SDP_4394.JPG';
+import sweet4 from '../assets/Sweet Rooms/SDP_4397.JPG';
+import sweet5 from '../assets/Sweet Rooms/SDP_4401.JPG';
+import sweet6 from '../assets/Sweet Rooms/SDP_4406.JPG';
+import sweet7 from '../assets/Sweet Rooms/SDP_4415.JPG';
+import sweet8 from '../assets/Sweet Rooms/SDP_4425.JPG';
 
-// Import Deluxe Room Images
-import deluxe1 from '../assets/Delux Room/SDP_4483.JPG';
-import deluxe2 from '../assets/Delux Room/SDP_4484.JPG';
-import deluxe3 from '../assets/Delux Room/SDP_4486.JPG';
-import deluxe4 from '../assets/Delux Room/SDP_4491.JPG';
-import deluxe5 from '../assets/Delux Room/SDP_4500.JPG';
-import deluxe6 from '../assets/Delux Room/SDP_4515.JPG';
-import deluxe7 from '../assets/Delux Room/SDP_4540.JPG';
+// Import Super Deluxe Royal Club Images
+import superDeluxe1 from '../assets/Super Deluxe Royal Club/SDP_4478.JPG';
+import superDeluxe2 from '../assets/Super Deluxe Royal Club/SDP_4483.JPG';
+import superDeluxe3 from '../assets/Super Deluxe Royal Club/SDP_4491.JPG';
+import superDeluxe4 from '../assets/Super Deluxe Royal Club/SDP_4498.JPG';
+import superDeluxe5 from '../assets/Super Deluxe Royal Club/SDP_4503.JPG';
+import superDeluxe6 from '../assets/Super Deluxe Royal Club/SDP_4521.JPG';
+import superDeluxe7 from '../assets/Super Deluxe Royal Club/SDP_4456.JPG';
 
-// Import Delux Royal Images
-import royal1 from '../assets/Delux Royal/SDP_4404.JPG';
-import royal2 from '../assets/Delux Royal/SDP_4406.JPG';
-import royal3 from '../assets/Delux Royal/SDP_4414.JPG';
-import royal4 from '../assets/Delux Royal/SDP_4428.JPG';
-import royal5 from '../assets/Delux Royal/SDP_4490.JPG';
-import royal6 from '../assets/Delux Royal/SDP_4496.JPG';
-import royal7 from '../assets/Delux Royal/SDP_4563.JPG';
+// Import Deluxe Separate Images
+import deluxeSep1 from '../assets/Deluxe Separate/SDP_4555.JPG';
+import deluxeSep2 from '../assets/Deluxe Separate/SDP_4556.JPG';
+import deluxeSep3 from '../assets/Deluxe Separate/SDP_4557.JPG';
+import deluxeSep4 from '../assets/Deluxe Separate/SDP_4558.JPG';
+import deluxeSep5 from '../assets/Deluxe Separate/SDP_4560.JPG';
+import deluxeSep6 from '../assets/Deluxe Separate/SDP_4562.JPG';
+import deluxeSep7 from '../assets/Deluxe Separate/SDP_4564.JPG';
+
+// Import Couple Bed Images
+import couple1 from '../assets/Couple Bed/SDP_4525.JPG';
+import couple2 from '../assets/Couple Bed/SDP_4526.JPG';
+import couple3 from '../assets/Couple Bed/SDP_4527.JPG';
+import couple4 from '../assets/Couple Bed/SDP_4530.JPG';
+import couple5 from '../assets/Couple Bed/SDP_4535.JPG';
+import couple6 from '../assets/Couple Bed/SDP_4540.JPG';
+import couple7 from '../assets/Couple Bed/SDP_4554.JPG';
+
+// Import Non AC Couple Bed Images
+import nonAcCouple1 from '../assets/Non AC Couple Bed/SDP_8265.JPG';
+import nonAcCouple2 from '../assets/Non AC Couple Bed/SDP_8266.JPG';
+import nonAcCouple3 from '../assets/Non AC Couple Bed/SDP_8267.JPG';
+import nonAcCouple4 from '../assets/Non AC Couple Bed/SDP_8268.JPG';
+import nonAcCouple5 from '../assets/Non AC Couple Bed/SDP_8269.JPG';
+import nonAcCouple6 from '../assets/Non AC Couple Bed/SDP_8270.JPG';
+import nonAcCouple7 from '../assets/Non AC Couple Bed/SDP_8276.JPG';
+
+// Import Non AC Seperate Images
+import nonAcSep1 from '../assets/Non AC Seperate/SDP_8297.JPG';
+import nonAcSep2 from '../assets/Non AC Seperate/SDP_8275.JPG';
+import nonAcSep3 from '../assets/Non AC Seperate/SDP_8280.JPG';
+import nonAcSep4 from '../assets/Non AC Seperate/SDP_8283.JPG';
+import nonAcSep5 from '../assets/Non AC Seperate/SDP_8284.JPG';
+import nonAcSep6 from '../assets/Non AC Seperate/SDP_8285.JPG';
+import nonAcSep7 from '../assets/Non AC Seperate/SDP_8286.JPG';
+import nonAcSep8 from '../assets/Non AC Seperate/SDP_8287.JPG';
 
 const rooms = [
   {
     id: 1,
-    title: 'Deluxe Room (A/C)',
-    price: '₹1470',
-    image: deluxe1,
-    specs: { sqft: '75', bed: '1 Queen', sleeps: '2' },
-    gallery: [deluxe1, deluxe2, deluxe3, deluxe4, deluxe5, deluxe6, deluxe7]
+    title: 'Couple Bed',
+    price: '₹1680',
+    image: couple1,
+    specs: { sqft: '100', bed: '1 Queen', sleeps: '2' },
+    gallery: [couple1, couple2, couple3, couple4, couple5, couple6, couple7]
   },
   {
     id: 2,
-    title: 'Deluxe Royal Club (A/C)',
-    price: '₹1890',
-    image: royal1,
-    specs: { sqft: '120', bed: '1 King', sleeps: '2' },
-    gallery: [royal1, royal2, royal3, royal4, royal5, royal6, royal7]
+    title: 'Deluxe Separate',
+    price: '₹1470',
+    image: deluxeSep1,
+    specs: { sqft: '75', bed: '2 Single', sleeps: '2' },
+    gallery: [deluxeSep1, deluxeSep2, deluxeSep3, deluxeSep4, deluxeSep5, deluxeSep6, deluxeSep7]
   },
   {
     id: 3,
-    title: 'Suite Room (A/C)',
+    title: 'Super Deluxe Royal Club',
+    price: '₹1890',
+    image: superDeluxe1,
+    specs: { sqft: '120', bed: '1 King', sleeps: '2' },
+    gallery: [superDeluxe1, superDeluxe2, superDeluxe3, superDeluxe4, superDeluxe5, superDeluxe6, superDeluxe7]
+  },
+  {
+    id: 4,
+    title: 'Sweet Rooms',
     price: '₹4200',
-    image: suite1,
+    image: sweet1,
     specs: { sqft: '180', bed: '4 Single', sleeps: '4' },
-    gallery: [suite1, suite2, suite3, suite4, suite5, suite6, suite7]
+    gallery: [sweet1, sweet2, sweet3, sweet4, sweet5, sweet6, sweet7, sweet8]
+  },
+  {
+    id: 5,
+    title: 'Non AC Couple Bed',
+    price: '₹1260',
+    image: nonAcCouple1,
+    specs: { sqft: '90', bed: '1 Queen', sleeps: '2' },
+    gallery: [nonAcCouple1, nonAcCouple2, nonAcCouple3, nonAcCouple4, nonAcCouple5, nonAcCouple6, nonAcCouple7]
+  },
+  {
+    id: 6,
+    title: 'Non AC Seperate',
+    price: '₹1260',
+    image: nonAcSep1,
+    specs: { sqft: '70', bed: '2 Single', sleeps: '2' },
+    gallery: [nonAcSep1, nonAcSep2, nonAcSep3, nonAcSep4, nonAcSep5, nonAcSep6, nonAcSep7, nonAcSep8]
   }
 ];
 

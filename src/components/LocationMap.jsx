@@ -36,10 +36,10 @@ const LocationMap = () => {
             </div>
           </div>
           <div className="pt-8 text-left">
-            <a 
-              href="https://www.google.com/maps/place/26%C2%B007'49.2%22N+89%C2%B027'45.2%22E/@26.130331,89.4599724,752m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d26.130331!4d89.4625473?hl=en&entry=ttu" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://maps.app.goo.gl/1teRdkt8xUZqqzSL6"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary"
             >
               Get Directions
@@ -48,13 +48,13 @@ const LocationMap = () => {
         </div>
         <div className="flex-[1.5] h-[500px] min-h-[400px] lg:h-auto rounded-none overflow-hidden glass-panel p-1 group border-white/5 bg-white/5">
           <div className="w-full h-full rounded-none overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3404.800889344108!2d89.4625556!3d26.130333300000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDA3JzQ5LjIiTiA4OcKwMjcnNDUuMiJF!5e1!3m2!1sen!2sin!4v1775450014080!5m2!1sen!2sin" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
-              loading="lazy" 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.115682855219!2d89.45965097485038!3d26.1304703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e2e1805482630b%3A0xcdf4a93da393afd0!2sHotel%20Sonar%20Tori%20Dinhata!5e0!3m2!1sen!2sin!4v1714150764516!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Hotel Location">
             </iframe>
