@@ -25,12 +25,15 @@ import couple3 from '../assets/Couple Bed/SDP_4527.JPG';
 import nonAc1 from '../assets/Non AC Couple Bed/SDP_8265.JPG';
 import nonAc2 from '../assets/Non AC Seperate/SDP_8297.JPG';
 
+// Import Additional Images
+import roomsDetails from '../assets/All_Images/Rooms_Details.jpeg';
+
 const galleryImages = [
   sweet1, sweet2, sweet3, sweet4,
   superDeluxe1, superDeluxe2, superDeluxe3,
   deluxeSep1, deluxeSep2, deluxeSep3,
   couple1, couple2, couple3,
-  nonAc1, nonAc2
+  nonAc1, nonAc2, roomsDetails
 ];
 
 const Gallery = () => {
@@ -92,13 +95,21 @@ const Gallery = () => {
         ))}
       </div>
 
-      <div className="text-center mt-20">
+      <div className="text-center mt-20 flex flex-col sm:flex-row items-center justify-center gap-6">
         <button
           onClick={() => openGallery(0)}
           className="btn-outline !px-12 !py-5"
         >
           View All Imagery ({galleryImages.length})
         </button>
+        <a
+          href="https://www.google.com/search?q=Hotel+Sonar+Tori+Dinhata#lrd=0x39e2e1805482630b:0xcdf4a93da393afd0,3,,,,"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary !px-12 !py-5 flex items-center justify-center gap-3"
+        >
+          <i className="ri-google-fill text-xl"></i> Rate Us on Google
+        </a>
       </div>
 
       {/* Gallery Modal */}
